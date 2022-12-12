@@ -25,7 +25,7 @@ query get_person{
 mutation create_person{
     createPerson(person : {
         id : 1
-        name: "amrut"
+        name: "marvin"
     }){
         id
         name
@@ -38,7 +38,7 @@ mutation create_Address{
         id: 1
         personId : 1
         type : SECONDARY
-        street : "some street"
+        street : "Asake Boulevarde"
     }){
         type
         street
@@ -57,7 +57,7 @@ query getbooks{
 mutation BookQueryDsl{
     BookQueryDsl(book:{
         id: "2"
-        name: "prabhu"
+        name: "ambrose"
     }){
         id
         name
