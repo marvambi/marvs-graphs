@@ -1,0 +1,45 @@
+type Person{
+    id: Int!
+    name: String!
+    address: [Address]
+    phone: String
+}
+type Address{
+    type: AddressType!
+    street: String
+}
+
+enum AddressType{
+    PRIMARY
+    SECONDARY
+}
+type Query{
+    person(id:Int!): Person
+    getBook(id:String!):[Book]
+}
+
+# Mutation
+
+input AddressInput{
+    id: Int!
+    personId: Int!
+    type: AddressType!
+    street: String!
+}
+input PersonInput{
+    id: Int!
+    name: String!
+}
+
+type Mutation{
+    createPerson(person: PersonInput):Person
+    createAddress(address: AddressInput): Address
+}
+
+# query DSl
+
+type Book{
+    id: String!
+    name: String!
+}
+
